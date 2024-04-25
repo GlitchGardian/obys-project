@@ -1,0 +1,310 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    cursor: none;
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    background-color: #0b0b0b;
+    padding: 15vh 10vw;
+    position: fixed;
+    z-index: 9999;
+}
+
+.line {
+    overflow: hidden;
+    display: flex;
+    gap: 3vw;
+}
+
+.line1-counter {
+    opacity: 0;
+    display: flex;
+    gap: 1vw;
+    align-items: top;
+}
+
+.line1-counter p {
+    font-family: 'silk serif';
+    font-size: 3vw;
+}
+
+.line1-counter p:nth-last-child(2) {
+    width: 60px;
+    text-align: right;
+}
+
+.line h1 {
+    font-family: 'plain';
+    font-size: 6vw;
+    text-transform: uppercase;
+}
+
+#line3 {
+    display: flex;
+    gap: 5vh;
+}
+
+.now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+}
+
+.now h1 {
+    font-weight: 200;
+    font-family: 'silk serif';
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: transparent;
+    animation-name: fontChanger;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fontChanger {
+    0% {
+        font-family: 'plain';
+        opacity: 1;
+    }
+
+    20% {
+        font-family: 'plain';
+        opacity: 0.2;
+    }
+
+    40% {
+        font-family: 'plain';
+        opacity: 0;
+    }
+
+    60% {
+        font-family: 'silk serif';
+        opacity: 1;
+    }
+
+    80% {
+        font-family: 'silk serif';
+        opacity: 0.2;
+    }
+
+    100% {
+        font-family: 'silk serif';
+        opacity: 0;
+    }
+}
+
+.para-bottom {
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: fit-content;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.para-bottom p {
+    font-family: 'plain';
+    font-size: 1vw;
+    font-weight: 200;
+    width: 50%;
+    opacity: 0.5;
+}
+
+.main {
+    position: relative;
+    background-color: #151515;
+}
+
+.curser {
+    position: fixed;
+    z-index: 999;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: white 1px solid;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.page1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.scroll {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.scroll p {
+    font-size: 1.2vw;
+    font-weight: 500;
+    opacity: 0.4;
+}
+
+.page1 .navbar {
+    height: 100px;
+    padding: 5vh 15vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 5vh;
+}
+
+.navbar .ham {
+    height: fit-content;
+    width: fit-content;
+}
+
+.ham img {
+    height: 20px;
+    width: 20px;
+}
+
+.left .logo p {
+    font-family: 'silk serif';
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+.right {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.vertical-menu p,
+.right .horizontal p {
+    font-family: 'plain';
+    font-weight: 400;
+    font-size: 2vh;
+}
+
+.right .horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3vw;
+}
+
+.content-page1 {
+    position: relative;
+    width: fit-content;
+    width: 100%;
+    padding-top: 18vh;
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    z-index: 9;
+}
+
+.content-page1 .number {
+    padding: 0.5vw;
+    overflow: hidden;
+}
+
+.content-page1 .number p {
+    font-family: 'silk serif';
+    font-size: 3vw;
+}
+
+.texts-right .inner {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.inner:nth-child(3) {
+    display: flex;
+    align-items: center;
+}
+
+.inner img {
+    height: 300px;
+    width: 500px;
+    object-fit: cover;
+    display: none;
+    position: absolute;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+#web p,
+#graphic p {
+    border-bottom: solid 0.6vw white;
+}
+
+.content-page1 .texts-right .inner p {
+    font-family: 'plain';
+    font-size: 7.5vw;
+    text-transform: uppercase;
+    line-height: 7.5vw;
+    font-weight: 500;
+}
+
+.hovereffect {
+    color: transparent;
+    -webkit-text-stroke: rgb(251, 105, 0) 1px;
+    font-family: 'plain';
+    font-weight: 800;
+    border: none;
+    transition: all ease 0.3s;
+}
+
+.page2 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.player {
+    position: absolute;
+    height: 8vw;
+    width: 8vw;
+    background-color: orange;
+    border-radius: 50%;
+    top: 7%;
+    right: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.player i {
+    font-size: 2.5vw;
+}
+
+.page2 .video-container {
+    height: 85%;
+    width: 70%;
+}
+
+.video-container video {
+    height: 100%;
+    width: 100%;
+}
