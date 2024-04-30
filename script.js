@@ -131,6 +131,7 @@ function pageonetextAnimation() {
         stagger: 0.2
     })
 }
+pageonetextAnimation();
 
 function pagetwovideoplayer() {
     video.addEventListener("mousemove", function (e) {
@@ -154,7 +155,3 @@ function pagetwovideoplayer() {
 
 }
 pagetwovideoplayer();
-
-pageonetextAnimation();
-
-

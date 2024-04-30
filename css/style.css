@@ -19,6 +19,7 @@ html {
     padding: 15vh 10vw;
     position: fixed;
     z-index: 9999;
+    overflow-y: hidden;
 }
 
 .line {
